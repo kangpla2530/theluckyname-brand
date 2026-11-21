@@ -819,25 +819,6 @@ footer .disclaim{flex-basis:100%;border-top:1px solid rgba(255,255,255,.1);paddi
         <a class="btn btn-line" href="https://line.me/R/ti/p/@theluckyname" data-track="click_line" data-loc="final"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5s5.9-3.5 8-6C21.3 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8Zm-3.5 10.4H6.6a.5.5 0 0 1-.5-.5V9a.5.5 0 0 1 1 0v3.4h1.4a.5.5 0 0 1 0 1Zm2-.5a.5.5 0 0 1-1 0V9a.5.5 0 0 1 1 0Zm4.6 0a.5.5 0 0 1-.9.3l-2-2.7v2.4a.5.5 0 0 1-1 0V9a.5.5 0 0 1 .9-.3l2 2.7V9a.5.5 0 0 1 1 0Zm3.1-2.4a.5.5 0 0 1 0 1h-1.4v.9h1.4a.5.5 0 0 1 0 1h-1.9a.5.5 0 0 1-.5-.5V9a.5.5 0 0 1 .5-.5h1.9a.5.5 0 0 1 0 1h-1.4v.9Z"/></svg>สอบถามเรื่องตั้งชื่อร้าน/แบรนด์มงคล</a>
         <a class="btn btn-ghost" href="tel:0993541542" data-track="click_call" data-loc="final">โทร 099-354-1542</a>
       </div>
-      <div class="share" aria-label="แชร์หน้านี้">
-        <p>รู้จักเพื่อนที่กำลังจะเปิดร้าน? แชร์หน้านี้ให้เขา</p>
-        <div class="share-btns">
-          <a class="sh sh-line" id="sh-line" href="#" target="_blank" rel="noopener" data-track="share_click" data-loc="line">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 3C6.5 3 2 6.6 2 11c0 3.9 3.5 7.2 8.3 7.9.3.1.8.2.9.5.1.3.1.7 0 1l-.1.9c0 .3-.2 1 .9.5s5.9-3.5 8-6C21.3 14.3 22 12.7 22 11c0-4.4-4.5-8-10-8Z"/></svg>
-            แชร์ทาง LINE
-          </a>
-          <a class="sh sh-fb" id="sh-fb" href="#" target="_blank" rel="noopener" data-track="share_click" data-loc="facebook">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M13.5 21v-8h2.7l.4-3.2h-3.1V7.8c0-.9.3-1.5 1.6-1.5h1.7V3.4c-.3 0-1.3-.1-2.4-.1-2.4 0-4.1 1.5-4.1 4.2v2.3H7.6V13h2.7v8h3.2Z"/></svg>
-            แชร์ทาง Facebook
-          </a>
-          <button class="sh sh-copy" id="sh-copy" type="button" data-track="share_click" data-loc="copy">
-            <svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M10 14a4 4 0 0 0 5.7 0l3-3a4 4 0 0 0-5.7-5.7l-1 1M14 10a4 4 0 0 0-5.7 0l-3 3a4 4 0 0 0 5.7 5.7l1-1"/></svg>
-            คัดลอกลิงก์
-          </button>
-        </div>
-        <input class="share-url" id="sh-url" type="text" readonly aria-label="ลิงก์หน้านี้" hidden>
-        <p class="share-msg" id="sh-msg" role="status"></p>
-      </div>
     </div>
   </div>
 </section>
@@ -847,8 +828,7 @@ footer .disclaim{flex-basis:100%;border-top:1px solid rgba(255,255,255,.1);paddi
 <footer>
   <div class="wrap">
     <div><b>TheLuckyName</b><br>บริษัท เมก้า ลักกี้ จำกัด<br>208/43 ม.1 ต.มะขามเตี้ย ถ.วัดโพธิ์-บางใหญ่ อ.เมือง จ.สุราษฎร์ธานี 84000</div>
-    <div>LINE @theluckyname<br>โทร 099-354-1542<br><a href="https://www.theluckyname.com/">www.theluckyname.com</a></div>
-    <p class="disclaim">การตั้งชื่อมงคลเป็นศาสตร์ตามความเชื่อ ใช้เพื่อเสริมความมั่นใจในการเริ่มต้นธุรกิจ ไม่ใช่การรับประกันผลประกอบการ</p>
+    <div>LINE @theluckyname<br>โทร 099-354-1542</div>
   </div>
 </footer>
 
@@ -880,20 +860,6 @@ document.querySelectorAll('.faq details').forEach(function(d){
   d.addEventListener('toggle', function(){ if (d.open) track('faq_open', {question: d.querySelector('summary').textContent}); });
 });
 
-/* ---------- share buttons: share this page without the ad tracking parameters ---------- */
-(function(){
-  var url = location.protocol.indexOf('http') === 0 ? location.origin + location.pathname : 'https://www.theluckyname.com/';
-  var text = 'รับตั้งชื่อร้าน ชื่อแบรนด์มงคล ตามดวงเจ้าของกิจการ โดย อ.ชัญ';
-  document.getElementById('sh-line').href = 'https://social-plugins.line.me/lineit/share?url=' + encodeURIComponent(url) + '&text=' + encodeURIComponent(text);
-  document.getElementById('sh-fb').href = 'https://www.facebook.com/sharer/sharer.php?u=' + encodeURIComponent(url);
-  var box = document.getElementById('sh-url'), msg = document.getElementById('sh-msg');
-  document.getElementById('sh-copy').addEventListener('click', function(){
-    function fallback(){ box.value = url; box.hidden = false; box.focus(); box.select(); msg.textContent = 'กด Ctrl+C (หรือค้างแล้วเลือกคัดลอก) เพื่อคัดลอกลิงก์'; }
-    if (navigator.clipboard && navigator.clipboard.writeText) {
-      navigator.clipboard.writeText(url).then(function(){ box.hidden = true; msg.textContent = 'คัดลอกลิงก์แล้ว'; }, fallback);
-    } else fallback();
-  });
-})();
 
 
 /* ---------- portfolio strip: page dots ---------- */
